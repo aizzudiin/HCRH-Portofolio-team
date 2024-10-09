@@ -1,0 +1,184 @@
+/* --- Google Font --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
+
+/* Header dengan animasi */
+header {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+    animation: fadeInDown 2s ease;
+}
+
+h1 {
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Animasi Fade In */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Tim Section --- */
+.team-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
+    width: 250px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #905dd8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.bio-card .btn {
+    display: block;          
+    margin: 20px auto 0;     
+    width: fit-content;      
+}
+
+.btn:hover {
+    background-color: #3d00a7;
+}
+
+/* Background Interaktif */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #6108e6, #fad0c4);
+    clip-path: circle(25% at right 40%);
+    z-index: -1;
+    animation: moveBackground 10s infinite alternate;
+}
+
+@keyframes moveBackground {
+    from {
+        clip-path: circle(25% at right 40%);
+    }
+    to {
+        clip-path: circle(30% at left 60%);
+    }
+}
+
+/* --- Halaman Bio --- */
+.bio-card {
+    background-color: white;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 1s ease;
+}
+
+.bio-header {
+    text-align: center;
+}
+
+.bio-header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.bio-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.bio-header h3 {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.bio-content {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Social Media Section --- */
+.bio-social {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.bio-social p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
